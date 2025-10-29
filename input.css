@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --color-primary: #3238f2;
+}
+
+@layer {
+  body {
+    @apply font-body;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display text-gray-800;
+  }
+
+  .container {
+    @apply px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 lg:mt-32;
+  }
+
+  .anchor-hover {
+    @apply border-b border-dotted border-y-gray-300 hover:border-solid hover:border-gray-800;
+  }
+
+  .gradient-hover-outer {
+    @apply bg-slate-200 hover:bg-gradient-to-br p-[1px] hover:from-red-200 hover:via-purple-200 hover:to-yellow-200;
+  }
+
+  .gradient-hover-inner {
+    @apply bg-slate-50 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50;
+  }
+}
